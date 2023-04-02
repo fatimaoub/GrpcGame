@@ -1,0 +1,13 @@
+syntax="proto3";
+option java_package="ma.enset.stubs";
+service ServiceJeu {
+  rpc NbrChoose(stream NumMessage) returns (stream NumResponse);
+}
+
+message NumMessage{
+  string nom=1;
+  string nombre=2;
+}
+message NumResponse{
+  string reponse=3;
+}
